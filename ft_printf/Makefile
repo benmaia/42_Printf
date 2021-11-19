@@ -13,7 +13,7 @@ RM = rm -rf
 all: ${NAME}
 
 .c.o:
-	${CC} ${FLAGS} -c $< ${<:.c.o} - I.${INCS}
+	${CC} ${FLAGS} -c $< ${<:.c.o} - I.${HFIL}
 
 ${NAME}: runlibft ${OBJS}
 	ar rcs ${NAME} ${OBJS} ${LIBFTOBJS}
