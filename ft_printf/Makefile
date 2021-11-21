@@ -1,35 +1,32 @@
-NAME = libftprint.a
+NAME = libftprintf.a
 
-SRCS = ${wildcard *.c}
-OBJS = ${SRCS:.c=.o}
-LIBFT = ${wildcard libft/libft/*.c}
-LIBFTOBJS = ${LIBFT:.c=.o}
-HFIL = ${wildcard *.h}
+FLAGS = -Wall -Wextra -Werror
 
-CC = gcc
-FLAGS = -Wall -Werror -Wextra -g -fsanitize=address
-RM = rm -rf
+LIBFT = libft
 
-all: ${NAME}
+HEADER = ft_printf.h
 
-.c.o:
-	${CC} ${FLAGS} -c $< ${<:.c.o} - I.${HFIL}
+SRCS = test.c
 
-${NAME}: runlibft ${OBJS}
-	ar rcs ${NAME} ${OBJS} ${LIBFTOBJS}
-	runlib ${NAME}
+OBJS = $(SRCS:.c=.o)
 
-runlibft:
-	make -C libft bonus
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@make -C $(LIBFT)
+	@cp libft/libft.a ./$(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+
+.o.c:
+	@$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
 
 clean:
-	${RM} ${NAME}
-	${MAKE} -C libft clean
+	@rm -f $(OBJS)
+	@make clean -C $(LIBFT)
 
 fclean: clean
-	${RM} ${NAME}
-	${MAKE} -C libft fclean
+	@rm -f $(NAME)
+	@make fclean -C $(LIBFT)
 
 re: fclean all
-
-.PHONY: all clean fclean re
