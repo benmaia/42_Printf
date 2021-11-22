@@ -2,11 +2,11 @@ NAME = libftprintf.a
 
 FLAGS = -Wall -Wextra -Werror
 
-LIBFT = libft
+LIBFT = libft/libft
 
 HEADER = ft_printf.h
 
-SRCS = test.c
+SRCS = $(wildcard *.c)
 
 OBJS = $(SRCS:.c=.o)
 
@@ -14,12 +14,12 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@make -C $(LIBFT)
-	@cp libft/libft.a ./$(NAME)
+	@cp libft/libft/libft.a ./$(NAME)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
-.o.c:
-	@$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
+#.o.c:
+#	@$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
 
 clean:
 	@rm -f $(OBJS)
@@ -30,3 +30,5 @@ fclean: clean
 	@make fclean -C $(LIBFT)
 
 re: fclean all
+
+.PHONY: all clean fclean re
