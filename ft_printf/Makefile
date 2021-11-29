@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 FLAGS = -Wall -Wextra -Werror
 
-LIBFT = libft/libft
+LIBFT = libft
 
 HEADER = ft_printf.h
 
@@ -14,7 +14,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@make -C $(LIBFT)
-	@cp libft/libft/libft.a ./$(NAME)
+	@cp libft/libft.a ./$(NAME)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
