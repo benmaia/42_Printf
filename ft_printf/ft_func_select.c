@@ -6,7 +6,7 @@
 /*   By: bmiguel- <bmiguel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 22:46:23 by bmiguel-          #+#    #+#             */
-/*   Updated: 2021/11/30 00:53:06 by bmiguel-         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:07:58 by bmiguel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ void	*ft_func_select(char c)
 {
 	if (c == 'c')
 		return (ft_printf_c);
-	if (c == 's')
+	else if (c == 's')
 		return (ft_printf_s);
-	if (c == 'p')
+	else if (c == 'p')
 		return (ft_printf_p);
-	if (c == 'd')
+	else if (c == 'd')
 		return (ft_printf_d);
-	if (c == 'i')
+	else if (c == 'i')
 		return (ft_printf_d);
-	if (c == 'u')
+	else if (c == 'u')
 		return (ft_printf_u);
-	if (c == 'x')
+	else if (c == 'x')
 		return (ft_printf_x);
-	if (c == 'X')
+	else
 		return (ft_printf_xx);
 }
