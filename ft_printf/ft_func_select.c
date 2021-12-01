@@ -6,11 +6,16 @@
 /*   By: bmiguel- <bmiguel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 22:46:23 by bmiguel-          #+#    #+#             */
-/*   Updated: 2021/12/01 15:07:58 by bmiguel-         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:21:08 by bmiguel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* the function selector, recieves a char, and depend of the char
+ * returns the write function to the write type of argument.
+ * All functions return return an int, the amount of chars it wrote
+ */
 
 void	*ft_func_select(char c)
 {
