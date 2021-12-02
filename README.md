@@ -8,11 +8,11 @@
 >*Because putnbr and putstr aren't enough*
 </br>
 </br>
-<p> The versatility of the **printf** function in **C** represents a great exercise in programming for us.</br>
+<p> The versatility of the printf function in C represents a great exercise in programming for us.</br>
 <p> This project is of moderate difficulty.</br>
 <p> It will enable you to discover variadic functions in C.</br>
 </br><p>
-<p> The key to a successful **ft_printf** is a well-structured and good extensible code.</br>
+<p> The key to a successful ft_printf is a well-structured and good extensible code.</br>
 </br></p>
 </br>
 <p> Printf OK ✅</p>
