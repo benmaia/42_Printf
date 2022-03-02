@@ -3,7 +3,9 @@
 <div align="center"><br>
 <img src="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" alt="https://user-images.githubusercontent.com/76601369/110706242-77158d00-81ef-11eb-8085-5da6f0988553.jpg" width="650" height="300">
 </div>
+
 >*Because putnbr and putstr aren't enough*
+
 <p> The versatility of the printf function in C represents a great exercise in programming for us.
 <p> This project is of moderate difficulty.
 <p> It will enable you to discover variadic functions in C.
